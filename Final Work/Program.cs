@@ -2,9 +2,6 @@
 
 string GetSeparator(bool IsLastElement, bool IsEmptyElement)
 {
-    Console.WriteLine($"IsLastElement = {IsLastElement}");
-    Console.WriteLine($"IsEmptyElement = {IsEmptyElement}");
-
     if (IsEmptyElement || IsLastElement)
     {
         return "";
@@ -22,8 +19,6 @@ string ArrayToString(string[] Words)
     {
         bool IsLast = i == Words.Length - 1;
         bool IsNextEmpty = !IsLast && Words[i + 1] == null;
-
-        Console.WriteLine($"Words[{i}] = {Words[i]}");
 
         Result = Result + Words[i] + GetSeparator(IsLast, IsNextEmpty);
     }
@@ -69,8 +64,6 @@ string[] GetFiltredArray(int MaxLenght, string[] OriginalArray)
 }
 //начало программы
 string WordsFromUser = GetWordsFromUser();
-
-Console.WriteLine($"данные от USER = {WordsFromUser}");
 
 string[] words = GetWordsArray(WordsFromUser);
 
